@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#121417">
+  <title>ReliefRoute — Disaster Relief Operations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="networkBar" class="network-bar online"><span class="status-dot"></span><strong id="networkLabel">ONLINE</strong><span id="networkDetail">Connected to ReliefRoute operations</span></div>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><div class="brand-mark">R</div><div><strong>RELIEFROUTE</strong><small>OPERATIONS</small></div></div>
+      <nav class="nav" aria-label="Primary navigation">
+        <button class="nav-item active" data-view="command"><span>⌘</span> Command Center</button>
+        <button class="nav-item" data-view="shelter"><span>⌂</span> Shelter Dashboard</button>
+        <button class="nav-item" data-view="report"><span>!</span> Emergency Report</button>
+        <button class="nav-item" data-view="reports"><span>≡</span> Active Reports</button>
+        <button class="nav-item" data-view="volunteer"><span>◇</span> Volunteer Dashboard</button>
+        <button class="nav-item" data-view="assignment"><span>↗</span> Assignment</button>
+        <button class="nav-item" data-view="inventory"><span>▦</span> Inventory</button>
+        <button class="nav-item" data-view="notifications"><span>◉</span> Notifications <b class="nav-badge">3</b></button>
+      </nav>
+      <div class="sidebar-bottom"><button class="ghost-btn" id="simulateOffline">Simulate offline</button><div class="user-chip"><div class="avatar">SC</div><div><strong>Operations User</strong><small>Admin / MVP</small></div></div></div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar"><button class="icon-btn mobile-menu" id="menuBtn">☰</button><div><div class="eyebrow" id="viewEyebrow">LIVE OPERATIONS</div><h1 id="viewTitle">Command Center</h1></div><div class="top-actions"><button class="icon-btn" id="syncBtn" title="Sync status">↻</button><button class="icon-btn notification-btn" data-view="notifications">◉<span></span></button><div class="avatar">SC</div></div></header>
+      <section id="view" class="view" aria-live="polite"></section>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
